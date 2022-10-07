@@ -36,7 +36,7 @@ app.get("/compose", function(req, res){
 app.post("/compose", function(req, res){
   const title = req.body.title
   const article = req.body.article
-  title = push(titles)
+  titles.push(title)
   articles.push(article)
   res.redirect("/")
 })
