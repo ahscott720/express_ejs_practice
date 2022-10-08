@@ -14,11 +14,10 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-const titles= []
-const articles = []
+const posts= []
 
 app.get("/", function(req, res){
-  res.render('home', {homeContent: homeStartingContent, titles: titles ,articles: articles})
+  res.render('home', {homeContent: homeStartingContent, posts: posts})
 })
 
 app.get("/about", function(req, res){
@@ -36,8 +35,11 @@ app.get("/compose", function(req, res){
 app.post("/compose", function(req, res){
   const title = req.body.title
   const article = req.body.article
-  titles.push(title)
-  articles.push(article)
+  const post = {
+    title: title,
+    article: article
+  }
+  posts.push(post)
   res.redirect("/")
 })
 
