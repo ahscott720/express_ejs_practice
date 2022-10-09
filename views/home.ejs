@@ -1,6 +1,6 @@
 <%- include('partials/header'); -%>
 <h1>Home</h1>
-<p><%= homeContent %></p>
+
 <div class="row">
     <% posts.forEach(function(post){ %>
         <div class="col-md-6 col-lg-3 "> 
@@ -13,4 +13,5 @@
         </div>
     <% }); %>
 </div>
+<a href="/compose" class="btn btn-success btn-lg active" role="button" aria-pressed="true">Add A New Post</a>
 <%- include('partials/footer'); -%>

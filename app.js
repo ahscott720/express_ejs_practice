@@ -4,10 +4,8 @@ const express = require("express");
 const ejs = require("ejs");
 const _ = require("lodash")
 
-const homeStartingContent = "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
-const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
-const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
-
+const aboutContent = "記断真闘負夜合碁左高報。良著済勉外見相界根周秋摯周検丸十続。成禁保米手水占掲原上師日大訃幻女鹿。能北葛炎月座作帯報伝解意加交。売論問井梨午念用母安禁体聞認月保気戦大。問図立能飾籍写事限共演治綬義率資謙遺獲真。夢銀既希注走間入観験選重。詳田合戸遅文高伸蜂低群予自組水行歳。載前手強盾作告問立額信計巡済歴著激年道上。"
+const contactContent = "面神細落陣企更信辞。増治携掲端左誓鬼功阪総更購万問防成織高求。農緒毎盗写出会文自案稿支。内化経不議病発全国防見担。尊感判投関録半重装最座軽姿。売毎画思上通文前戦書益笑。代電山落統出抑康四終行緊供目管中郡編。証種冷丁日理幕置浸族句転新著編始注写健。外衆岡勧図院欲時芸真徳共辞経戦"
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -18,7 +16,7 @@ app.use(express.static("public"));
 const posts= []
 
 app.get("/", function(req, res){
-  res.render('home', {homeContent: homeStartingContent, posts: posts})
+  res.render('home', {posts: posts})
 })
 
 app.get("/posts/:title", function(req, res){
